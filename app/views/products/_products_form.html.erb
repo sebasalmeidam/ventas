@@ -1,0 +1,32 @@
+<div class="md-form">
+  <%= f.text_field :codigo, class: 'form-control'  %>
+  <%= f.label :codigo %>
+</div>
+<div class="md-form">
+  <%= f.text_field :nombre, class: 'form-control'  %>
+  <%= f.label :nombre %>
+</div>
+<div class="md-form">
+  <%= f.text_field :descripcion, class: 'form-control'  %>
+  <%= f.label :descripcion %>
+</div>
+<div class="md-form">
+  <%= f.number_field :precio, step: :any, class: 'form-control'  %>
+  <%= f.label :precio %>
+</div>
+<div class="md-form">
+  <div class="file-field">
+    <div class="btn btn-primary btn-sm float-left">
+      <span>Escoger imagen</span>
+      <%= f.file_field :imagenes, multiple: true %>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder="Escoger imagen">
+    </div>
+  </div>
+</div>
+<div class="md-form">
+  <span class="waves-input-wrapper waves-effect waves-light" style=" display: block; ">
+    <%= f.submit 'Enviar', class: 'btn btn-block btn-secondary btn-sm' %>
+  </span >
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "ventas",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "@babel/preset-react": "^7.10.1",
+    "@rails/webpacker": "5.1.1",
+    "apollo-boost": "^0.4.9",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "graphql": "^15.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-loading-skeleton": "^2.0.1",
+    "react-slick": "^0.26.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+}

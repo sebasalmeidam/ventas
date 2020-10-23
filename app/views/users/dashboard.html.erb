@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Dashboard Principal!</h1>
+  <% unless current_user.logo.attached? %>
+    <div class="row">
+      <div class="col-12">
+        <%= link_to 'Agregar logo', user_path(current_user) %>
+      </div>
+    </div>  
+  <% end %>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header blue white-text">
+          ACCESO RÁPIDO
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6 col-lg-3 white-text">
+              <%= link_to categories_path, class: 'btn btn-lg btn-primary btn-block' do %>
+                <i class="fas fa-list fa-3x"></i> <br>
+                <span>Categorías</span>
+              <% end %>
+            </div>
+            <div class="col-6 col-lg-3 white-text">
+              <%= link_to show_products_path(current_user), class: 'btn btn-lg btn-default btn-block' do %>
+                <i class="fas fa-shopping-cart fa-3x"></i> <br>
+                <span>Página de Venta</span>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+  <section>
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Perfil 
+          <%= link_to 'Editar', edit_user_path(current_user), class: 'btn btn-outline-primary btn-rounded waves-effect btn-sm' %>  
+        </h1>    
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="row">
+          <div class="col-12">
+            <% if @user.foto_perfil.attached? %>
+              <%= image_tag @user.foto_perfil, class: 'img-fluid', style: 'max-height: 100px' %>
+            <% else %>
+              <%= link_to 'Agregar foto', edit_user_path(@user) %>
+            <% end %>
+          </div>
+          <div class="col-12">
+            <ul class="list-unstyled pl-0">
+              <li><b>Nombre:</b> <%= @user.nombres %></li>
+              <li><b>Correo:</b> <%= @user.email %></li>
+              <li><b>Marca y URL:</b> <%= @user.marca %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <% if @user.logo.attached? %>
+          <%= image_tag @user.logo, class: 'img-fluid' %>
+        <% else %>
+          <%= link_to 'Agregar logo', edit_user_path(@user) %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Categorías</h1>
+  <div class="row">
+    <div class="col-12">
+      Detalla las categorías para tus productos
+    </div>
+  </div>
+
+  <section>
+    <div class="row">
+      <div class="col-12">
+        <%= link_to 'Agregar Categoría', new_category_path, class: 'btn btn-secondary btn-sm ml-0' %>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12 table-responsive">
+        <table class="table table-sm table-hover table-striped">
+          <thead class="blue white-text">
+            <tr>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @categories.each do |category| %>
+              <tr>
+                <td><%= link_to category.nombre, category_path(category), class: 'blue-text' %></td>
+                <td><%= category.descripcion %></td>
+                <td class="">
+                  <%= link_to 'Editar', edit_category_path(category), class: 'btn btn-sm btn-info' %>
+                  <%= link_to 'Eliminar', category_path(category), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Estás por eliminar este registro, continuar?"}  %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>

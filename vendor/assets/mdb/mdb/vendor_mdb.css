@@ -1,0 +1,33 @@
+@import 'mdb/css/bootstrap.min';
+@import 'mdb/css/mdb';
+
+
+.navbar {
+  z-index: 1040;
+}
+.side-nav {
+  margin-top: 52px !important;
+}
+
+@media (min-width: 1200px){
+.fixed-sn main {
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
+}
+
+.side-nav.wide.slim .sn-ad-avatar-wrapper a span {
+  display: none;
+}
+
+.content {
+min-height: 100vh;
+height: auto;
+transition: all 0.2s ease-in-out;
+}
+
+@media(min-width: 1200px) {
+  .content {
+  padding-left: 250px;
+  }
+}

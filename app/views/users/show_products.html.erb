@@ -1,0 +1,32 @@
+<%= javascript_pack_tag 'Ventas' %>
+<div class="container-fluid grey lighten-3">
+  
+  <section class="container blue darken-3 text-white">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-bold">Lista de Productos</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="container white mt-3">
+    <div class="row" style="max-height: 200px;">
+      <div class="col-6 align-self-center">
+        <%= image_tag url_for(current_user.logo), class: 'img-fluid' %>
+      </div>
+      <div class="col-6 text-right align-self-center">
+        ¿Quiéres vender tus productos <br> o ser nuestro distribuidor? <br>
+        <strong><%= link_to 'Contáctanos', '/' %></strong>
+      </div>
+    </div>
+  </section>
+  <%= content_tag :div,
+    id: "props",
+    data: {
+      usuario: current_user.slug
+    }.to_json do %>
+  <% end %>
+  <section id="react-ventas" class="container mt-3">
+    
+  </section>
+</div>
